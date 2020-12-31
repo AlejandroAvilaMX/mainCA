@@ -16,7 +16,6 @@ body {
     background-color: #bad2ff;
 }
 table, th, td {
-    margin-top: 50px;
     border-collapse: collapse;
     border: 5px solid black;
     text-align: center;
