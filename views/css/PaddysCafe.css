@@ -3,8 +3,10 @@ html {
   min-height: 100%;
 }
 body {
+    background-color: cornsilk;
   /* Margin bottom by footer height */
   margin-bottom: 90px;
+
 }
 .footer {
     position: absolute;
@@ -13,7 +15,7 @@ body {
     /* Set the fixed height of the footer here */
     height: 40px;
     line-height: 40px; /* Vertically center the text there */
-    background-color: #bad2ff;
+    background-color: #eff88f;
 }
 table, th, td {
     border-collapse: collapse;
