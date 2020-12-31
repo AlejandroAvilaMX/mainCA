@@ -1,3 +1,4 @@
+/* This code was taken from Mikhail's classes */
 function draw_table()
 {
 	$("#results").empty();
