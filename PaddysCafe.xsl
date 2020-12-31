@@ -8,7 +8,7 @@
                 </tr>
                 <tr>
                     <th>Select</th>
-                    <th>Item</th>
+                    <th>Name</th>
                     <th>Price</th>
                 </tr>
             </thead>
