@@ -5,7 +5,7 @@ html {
 body {
     background-color: cornsilk;
     /* Margin bottom by footer height */
-    margin-bottom: 90px;
+    margin-bottom: 170px;
 }
 h1{
     font-size: 60px;
@@ -14,9 +14,9 @@ h1{
 .footer {
     position: absolute;
     bottom: 0;
-    width: 130%;
+    width: 100%;
     /* Set the fixed height of the footer here */
-    height: 120px;
+    height: 150px;
     line-height: 40px; /* Vertically center the text there */
     background-color: #eff88f;
 }
