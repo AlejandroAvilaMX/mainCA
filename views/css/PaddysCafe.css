@@ -14,9 +14,9 @@ h1{
 .footer {
     position: absolute;
     bottom: 0;
-    width: 100%;
+    width: 130%;
     /* Set the fixed height of the footer here */
-    height: 40px;
+    height: 120px;
     line-height: 40px; /* Vertically center the text there */
     background-color: #eff88f;
 }
