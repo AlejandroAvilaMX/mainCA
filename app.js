@@ -70,8 +70,9 @@ router.post('/post/json', function (req, res) {  //New post function
             result.catalog.section[obj.sec_n].entree.push({ 'item': obj.item, 'price': obj.price });  //We have to go to the section in my catalog first, grabing the objet (submenu).section number, then in the entree we push a new item and a new price
             console.log(JSON.stringify(result, null, "  ")); //This will only print on the console
 
-            jsToXmlFile('UltraVision.xml', result, function (err) {
-                if (err) console.log(err);
+            //Writing back in the .xml file
+            jsToXmlFile('UltraVision.xml', result, function (err) {  //Conversion back from the .xml
+                if (err) console.log(err);  //Print on the console any error
             });
         });
     };

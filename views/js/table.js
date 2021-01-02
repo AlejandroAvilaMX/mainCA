@@ -18,21 +18,23 @@ function draw_table() {
     $.getJSONuncached("/get/html")  //Here the code calls the path
 };
 
+//Function that allow us to highligh a row when we click it
 function select_row() {
-    $("#menuTable tbody tr[id]").click(function () {
-        $(".selected").removeClass("selected");
+    $("#menuTable tbody tr[id]").click(function () {  //We speficy that the funcion will be used when we click
+        $(".selected").removeClass("selected");  //The row will be now "selected"
         $(this).addClass("selected");
-        var section = $(this).prevAll("tr").children("td[colspan='3']").length - 1;
-        var entree = $(this).attr("id") - 1;
-        delete_row(section, entree);
+        var section = $(this).prevAll("tr").children("td[colspan='3']").length - 1; //Storing the section in a variable
+        var entree = $(this).attr("id") - 1;  //Storing the entree in a variable
+        delete_row(section, entree);  //calling the "delete_row" fuction
     })
 };
 
+//Function to Delete a selected row
 function delete_row(sec, ent) {
     $("#delete").click(function () {
         $.ajax(
             {
-                url: "/post/delete",
+                url: "/post/delete",  //end point
                 type: "POST",
                 data:
                 {
