@@ -62,7 +62,7 @@ router.post('/post/json', function (req, res) {
         xmlFileToJs('UltraVision.xml', function (err, result) {
             if (err) throw (err);
             
-            result.cafemenu.section[obj.sec_n].entree.push({'item': obj.item, 'price': obj.price});
+            result.catalog.section[obj.sec_n].entree.push({'item': obj.item, 'price': obj.price});
 
             console.log(JSON.stringify(result, null, "  "));
 
@@ -87,7 +87,7 @@ router.post('/post/delete', function (req, res) {
         xmlFileToJs('UltraVision.xml', function (err, result) {
             if (err) throw (err);
             
-            delete result.cafemenu.section[obj.section].entree[obj.entree];
+            delete result.catalog.section[obj.section].entree[obj.entree];
 
             console.log(JSON.stringify(result, null, "  "));
 

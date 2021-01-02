@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<cafemenu>
+<catalog>
   <section name="CD Music">
     <entree>
       <item>Nine</item>
@@ -66,4 +66,4 @@
       <price>22.50</price>
     </entree>
   </section>
-</cafemenu>
+</catalog>
