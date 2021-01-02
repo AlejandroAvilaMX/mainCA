@@ -82,12 +82,13 @@
                 <form>
                     <div class="input-group">
                         <div class="input-group-prepend">
+                            <p><b>Total of the Bill:</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
                             <span class="input-group-text">&euro;</span>
                         </div>
                         <input type="text" class="form-control" aria-label="Total" name="txtBillAmt" disabled>
                         <div class="input-group-append">
                         </div>
-                        <input class="btn btn-block btn-success mt-2" type="button" name="btnCalcBill"
+                        <input class="btn btn-block btn-success mt-3" type="button" name="btnCalcBill"
                             value="Calculate Bill" id="calcBill">
                     </div>
                 </form>
@@ -127,6 +128,7 @@
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/table.js"></script>
     <script src="js/UltraVision.js"></script>
+    <!-- This is the code that we used to calculate the total of the Bill -->
     <script>
         window.addEventListener("load", function () {
             document.forms[1].txtBillAmt.value = calculateBill('menuTable');
