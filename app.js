@@ -15,11 +15,11 @@ router.use(express.urlencoded({ extended: true })); //We allow the data sent fro
 router.use(express.json()); //We include support for JSON that is coming from the client
 
 // Function to read in XML file and convert it to JSON
-function xmlFileToJs(filename, cb) {
-    var filepath = path.normalize(path.join(__dirname, filename));
+function xmlFileToJs(filename, cb) { //We passed the name of the file (UltraVision)
+    var filepath = path.normalize(path.join(__dirname, filename)); //First we get the name of the file (UltraVision)
     fs.readFile(filepath, 'utf8', function (err, xmlStr) {
-        if (err) throw (err);
-        xml2js.parseString(xmlStr, {}, cb);
+        if (err) throw (err);  //If something goes wrong
+        xml2js.parseString(xmlStr, {}, cb);  //Parsing xml to json using parseString
     });
 }
 
@@ -29,12 +29,13 @@ function jsToXmlFile(filename, obj, cb) {
     var builder = new xml2js.Builder();
     var xml = builder.buildObject(obj);
     fs.unlinkSync(filepath);
-    fs.writeFile(filepath, xml, cb);
+    fs.writeFile(filepath, xml, cb);  //Writes on the same file (UltraVision.xml)
 }
 
-router.get('/', function (req, res) {
+//In order to start the index file that we have, we had created another route that points back to the route of the website
+router.get('/', function (req, res) {  //.get is the http method of requesting a page and '/' is the path (the route of our website), req is request and res is response
 
-    res.render('index');
+    res.render('index'); //New function
 
 });
 
