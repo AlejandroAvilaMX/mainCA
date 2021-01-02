@@ -1,4 +1,6 @@
 /* This code was taken from Mikhail's classes */
+//This is a jquery code
+//This function (draw table) calls the function to the server
 function draw_table() {
     $("#results").empty();
     $.getJSONuncached = function (url) {
@@ -7,13 +9,13 @@ function draw_table() {
                 url: url,
                 type: 'GET',
                 cache: false,
-                success: function (html) {
-                    $("#results").append(html);
+                success: function (html) {   //When the call is successful 
+                    $("#results").append(html);  //Add the html code to the results div
                     select_row();
                 }
             });
     };
-    $.getJSONuncached("/get/html")
+    $.getJSONuncached("/get/html")  //Here the code calls the path
 };
 
 function select_row() {
@@ -43,6 +45,7 @@ function delete_row(sec, ent) {
     })
 };
 
+//Calling the draw table when we open the page
 $(document).ready(function () {
     draw_table();
 });
