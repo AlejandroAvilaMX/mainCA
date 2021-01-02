@@ -1,3 +1,4 @@
+/* This code was taken from Mikhail's classes */
 var http = require('http'), //This module provides the HTTP server functionalities
     path = require('path'), //The path module provides utilities for working with file and directory paths
     express = require('express'), //This module allows this app to respond to HTTP Requests, defines the routing and renders back the required content
@@ -56,18 +57,18 @@ router.get('/get/html', function (req, res) { //.get is the http method of reque
 
 });
 
-router.post('/post/json', function (req, res) {
+//Code to Add new Items
+router.post('/post/json', function (req, res) {  //New post function
 
     function appendJSON(obj) {
 
-        console.log(obj)
-
+        console.log(obj)  //This will only print on the console
+        //We will do the conversion first
         xmlFileToJs('UltraVision.xml', function (err, result) {
             if (err) throw (err);
 
-            result.catalog.section[obj.sec_n].entree.push({ 'item': obj.item, 'price': obj.price });
-
-            console.log(JSON.stringify(result, null, "  "));
+            result.catalog.section[obj.sec_n].entree.push({ 'item': obj.item, 'price': obj.price });  //We have to go to the section in my catalog first, grabing the objet (submenu).section number, then in the entree we push a new item and a new price
+            console.log(JSON.stringify(result, null, "  ")); //This will only print on the console
 
             jsToXmlFile('UltraVision.xml', result, function (err) {
                 if (err) console.log(err);
@@ -75,9 +76,9 @@ router.post('/post/json', function (req, res) {
         });
     };
 
-    appendJSON(req.body);
+    appendJSON(req.body);  //Calls the functions
 
-    res.redirect('back');
+    res.redirect('back');  //Goes back to the original page
 
 });
 
