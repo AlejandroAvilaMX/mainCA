@@ -9,6 +9,7 @@ var http = require('http'), //This module provides the HTTP server functionaliti
 var router = express(); //We set our routing to be handled by Express
 var server = http.createServer(router); //This is where our server gets created
 
+//This makes our router able to see the CSS nad JavaScript files
 router.use(express.static(path.resolve(__dirname, 'views'))); //We define the views folder as the one where all static content will be served
 router.use(express.urlencoded({ extended: true })); //We allow the data sent from the client to be coming in as part of the URL in GET and POST requests
 router.use(express.json()); //We include support for JSON that is coming from the client
@@ -37,7 +38,8 @@ router.get('/', function (req, res) {
 
 });
 
-router.get('/get/html', function (req, res) {
+//Setting the route of our website
+router.get('/get/html', function (req, res) { //.get is the http method of requesting a page and '/' is the path (the route of our website), req is request and res is response
 
     res.writeHead(200, { 'Content-Type': 'text/html' }); //We are responding to the client that the content served back is HTML and the it exists (code 200)
 
@@ -103,7 +105,8 @@ router.post('/post/delete', function (req, res) {
 
 });
 
+//Creating the server that will listen on the specific port 
 server.listen(process.env.PORT || 3000, process.env.IP || "0.0.0.0", function () {
-    var addr = server.address();
-    console.log("Server listnening at", addr.address + ":" + addr.port);
+    var addr = server.address(); //This is the server address
+    console.log("Server listnening at", addr.address + ":" + addr.port); //We are just printing on the console
 });
