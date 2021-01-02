@@ -83,28 +83,30 @@ router.post('/post/json', function (req, res) {  //New post function
 
 });
 
-router.post('/post/delete', function (req, res) {
+//Code to Delete a selected Item
+router.post('/post/delete', function (req, res) {  //New Delete function
 
     function deleteJSON(obj) {
 
-        console.log(obj)
+        console.log(obj)  //This will only print on the console
 
         xmlFileToJs('UltraVision.xml', function (err, result) {
             if (err) throw (err);
 
-            delete result.catalog.section[obj.section].entree[obj.entree];
+            delete result.catalog.section[obj.section].entree[obj.entree];  //Gets the result of the catalog, then takes the section (specific section), then the entree (specific entree)
 
-            console.log(JSON.stringify(result, null, "  "));
+            console.log(JSON.stringify(result, null, "  "));  //This will only print on the console
 
-            jsToXmlFile('UltraVision.xml', result, function (err) {
-                if (err) console.log(err);
+            //Writing back in the .xml file
+            jsToXmlFile('UltraVision.xml', result, function (err) {  //Conversion back from the .xml
+                if (err) console.log(err);  //Print on the console any error
             });
         });
     };
 
-    deleteJSON(req.body);
+    deleteJSON(req.body);  //Calls the functions
 
-    res.redirect('back');
+    res.redirect('back');  //Goes back to the original page
 
 });
 

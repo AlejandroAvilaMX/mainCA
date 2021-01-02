@@ -1,65 +1,65 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <catalog>
-  <section name="CD Music">
-    <entree>
-      <item>Nine</item>
-      <price>15.95</price>
-    </entree>
-    <entree>
-      <item>Thriller</item>
-      <price>10.50</price>
-    </entree>
-    <entree>
-      <item>The Eminem Show</item>
-      <price>8.70</price>
-    </entree>
-    <entree>
-      <item>Hybrid Theory</item>
-      <price>11.90</price>
-    </entree>
-    <entree>
-      <item>Speak Now</item>
-      <price>10.00</price>
-    </entree>
-  </section>
-  <section name="DVD Movies">
-    <entree>
-      <item>Avengers: Endgame</item>
-      <price>22.99</price>
-    </entree>
-    <entree>
-      <item>Ready Player One</item>
-      <price>19.95</price>
-    </entree>
-    <entree>
-      <item>The Maze Runner</item>
-      <price>15.75</price>
-    </entree>
-    <entree>
-      <item>The Hangover</item>
-      <price>15.25</price>
-    </entree>
-    <entree>
-      <item>Happy Death Day</item>
-      <price>13.90</price>
-    </entree>
-  </section>
-  <section name="TV Series">
-    <entree>
-      <item>The Big Bang Theory</item>
-      <price>27.95</price>
-    </entree>
-    <entree>
-      <item>How I Met Your Mother</item>
-      <price>26.99</price>
-    </entree>
-    <entree>
-      <item>Friends</item>
-      <price>25.70</price>
-    </entree>
-    <entree>
-      <item>House</item>
-      <price>20.50</price>
-    </entree>
-  </section>
+    <section name="CD Music">
+        <entree>
+            <item>Nine</item>
+            <price>15.95</price>
+        </entree>
+        <entree>
+            <item>Thriller</item>
+            <price>10.50</price>
+        </entree>
+        <entree>
+            <item>The Eminem Show</item>
+            <price>8.70</price>
+        </entree>
+        <entree>
+            <item>Hybrid Theory</item>
+            <price>11.90</price>
+        </entree>
+        <entree>
+            <item>Speak Now</item>
+            <price>10.00</price>
+        </entree>
+    </section>
+    <section name="DVD Movies">
+        <entree>
+            <item>Avengers: Endgame</item>
+            <price>22.99</price>
+        </entree>
+        <entree>
+            <item>Ready Player One</item>
+            <price>19.95</price>
+        </entree>
+        <entree>
+            <item>The Maze Runner</item>
+            <price>15.75</price>
+        </entree>
+        <entree>
+            <item>The Hangover</item>
+            <price>15.25</price>
+        </entree>
+        <entree>
+            <item>Happy Death Day</item>
+            <price>13.90</price>
+        </entree>
+    </section>
+    <section name="TV Series">
+        <entree>
+            <item>The Big Bang Theory</item>
+            <price>27.95</price>
+        </entree>
+        <entree>
+            <item>How I Met Your Mother</item>
+            <price>26.99</price>
+        </entree>
+        <entree>
+            <item>Friends</item>
+            <price>25.70</price>
+        </entree>
+        <entree>
+            <item>House</item>
+            <price>20.50</price>
+        </entree>
+    </section>
 </catalog>
