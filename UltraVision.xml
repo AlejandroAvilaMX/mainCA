@@ -61,9 +61,5 @@
       <item>House</item>
       <price>20.50</price>
     </entree>
-    <entree>
-      <item>Breaking Bad</item>
-      <price>22.50</price>
-    </entree>
   </section>
 </catalog>
