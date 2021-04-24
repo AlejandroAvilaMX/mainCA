@@ -1,0 +1,25 @@
+{
+  "name": "mainca",
+  "version": "0.0.1",
+  "description": "Final CA for IWA ",
+  "main": "app.js",
+  "scripts": {
+    "test": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlejandroAvilaMX/newtest.git"
+  },
+  "author": "Cesar Alejandro Avila Calderon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlejandroAvilaMX/mainCA/issues"
+  },
+  "homepage": "https://github.com/AlejandroAvilaMX/mainCA#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "cors": "^2.8.5",
+    "morgan": "^1.10.0"
+  }
+}
