@@ -1,16 +1,17 @@
-const http = require('http'),
-logger = require('morgan'),
-cors = require('cors'),
-express = require('express'),
+//Those are the modules that our app will need
+const http = require('http'),           //Provides the http functionality
+logger = require('morgan'),             //morgan is our logger
+cors = require('cors'),                 //This allow us to do the cross side request
+express = require('express'),           //
 bodyParser = require('body-parser'),
-mongoose = require('mongoose');
+mongoose = require('mongoose');         //Allow us to connect to oyr Database 
 
-var app = express();
-var port = 8000;
+var app = express();                                            //This is the module that allow us set and star the server 
+var port = 8000;                                                //This is the port
 
-app.use(bodyParser.json());
+app.use(bodyParser.json());                 //To be able to wokr and parse the json data
 app.use(logger('tiny'));
-app.use(require('./routes'));
+app.use(require('./routes'));               //To work with our routes independenly 
 
 app.get ('/hello', (req, res) => {
     res.write("Test");
@@ -27,12 +28,13 @@ app.get ('/hello', (req, res) => {
 //    console.log('MongoDB is successfully connected');
 //});
 
+//Conect our app using the defined port
 app.listen(port, function(err){
     console.log('Listening on port: ' + port);
 });
 
 const dbURI = "mongodb://localhost/test";
-
+//Connect mongoose with MondgoDB
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
         .then((result) => console.log('connected to db'))
         .catch((err) => console.log(err)); 
