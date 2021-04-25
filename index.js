@@ -27,12 +27,12 @@ app.get ('/hello', (req, res) => {
 //    console.log('MongoDB is successfully connected');
 //});
 
+app.listen(port, function(err){
+    console.log('Listening on port: ' + port);
+});
+
 const dbURI = "mongodb://localhost/test";
 
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
         .then((result) => console.log('connected to db'))
         .catch((err) => console.log(err)); 
-
-app.listen(port, function(err){
-    console.log('Listening on port: ' + port);
-});
