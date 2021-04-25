@@ -29,21 +29,20 @@ exports.getItem = function(req, res) {
   }); 
 };
 
-/*
-exports.updateUser = function(req, res) {
-  User.findByIdAndUpdate({_id: req.params.id}, req.body, {new: true}, function (err, users) {
+exports.updateItem = function(req, res) {
+  Catalog.findByIdAndUpdate({_id: req.params.id}, req.body, {new: true}, function (err, catalog) {
     if (err) {
       res.status(400).json(err); 
     } 
-    res.json(users);
+    res.json(catalog);
   }); 
 };
 
-exports.deleteUser = function(req, res) {
-  User.findByIdAndRemove({_id: req.params.id}, function (err, users) {
+exports.deleteItem = function(req, res) {
+  Catalog.findByIdAndRemove({_id: req.params.id}, function (err, catalog) {
     if (err) {
       res.status(400).json(err); 
     } 
-    res.json(users);
+    res.json(catalog);
   }); 
-};*/
+};
