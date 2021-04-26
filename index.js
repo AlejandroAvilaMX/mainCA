@@ -9,11 +9,11 @@ dotenv = require("dotenv");                 //Working with dotenv
 
 var app = express();                        //This is the module that allow us set and star the server 
 var port = 8000;                            //This is the port
+dotenv.config();                            //Specify tha we are going to work with our .env file
 
 app.use(bodyParser.json());                 //To be able to wokr and parse the json data
 app.use(logger('tiny'));
 app.use(require('./routes'));               //To work with our routes independenly 
-dotenv.config();                            //Specify tha we are going to work with our .env file
 
 app.get ('/hello', (req, res) => {
     res.write("Test");
