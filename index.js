@@ -33,8 +33,10 @@ app.listen(port, function(err){
     console.log('Listening on port: ' + port);
 });
 
-const dbURI = "mongodb://localhost/test";
 //Connect mongoose with MondgoDB
+//const dbURI = "mongodb://localhost/test";       //Conect to MongoDB locally
+const dbURI = "mongodb+srv://pass1234:pass1234@cluster0.4o0vp.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";       //Conect to MongoDB web
+
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
         .then((result) => console.log('connected to db'))
         .catch((err) => console.log(err)); 
