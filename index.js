@@ -15,10 +15,10 @@ app.use(bodyParser.json());                 //To be able to wokr and parse the j
 app.use(logger('tiny'));
 app.use(require('./routes'));               //To work with our routes independenly 
 
-app.get ('/hello', (req, res) => {
-    res.write("Test");
-    res.write(users.join('\n'));
-});
+//app.get ('/hello', (req, res) => {
+//    res.write("Test");
+//    res.write(users.join('\n'));
+//});
 
 //mongoose.connect('mongodb://localhost/test');
 
