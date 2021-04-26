@@ -8,7 +8,7 @@ mongoose = require('mongoose');             //Allow us to connect to our Databas
 dotenv = require("dotenv");                 //Working with dotenv
 
 var app = express();                        //This is the module that allow us set and star the server 
-var port = 8000;                            //This is the port
+var port = process.env.PORT || 8000;        //This is the port
 dotenv.config();                            //Specify tha we are going to work with our .env file
 
 app.use(bodyParser.json());                 //To be able to wokr and parse the json data
